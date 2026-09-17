@@ -1,4 +1,4 @@
-# AIML Vityarthi BYOP — <Your Roll Number>
+# JAVA Vityarthi BYOP BY 25BAI11043
 # Student Performance Management System
 
 ![Java](https://img.shields.io/badge/Java-17%2B-blue?logo=openjdk)
@@ -56,7 +56,7 @@ I built this because I was tired of watching percentages get recalculated by han
 ## Project Structure
 
 ```
-BYOP_JAVA/
+Vityarthi_Java_Project_25BAI11043/
 ├── diagrams/                          # Architecture, workflow & UML diagrams (PNG)
 ├── out/
 │   ├── AppTest.class
@@ -82,7 +82,7 @@ BYOP_JAVA/
 └── statement.md                       # Problem statement, scope, target users
 ```
 
-`out/` is just what `javac` spits out locally — I'm not committing it. `.gitignore` keeps `out/`, `bin/`, `*.class`, and `students.csv` out of the repo, so only `src/`, `diagrams/`, and the docs actually get pushed.
+`out/` is just what `javac` spits out locally, I'm not committing it. `.gitignore` keeps `out/`, `bin/`, `*.class`, and `students.csv` out of the repo, so only `src/`, `diagrams/`, and the docs actually get pushed.
 
 ## Requirements
 
@@ -99,16 +99,16 @@ BYOP_JAVA/
 
 1. Clone it:
    ```bash
-   git clone https://github.com/<your-username>/BYOP_JAVA.git
-   cd BYOP_JAVA
+   git clone https://github.com/iampiyushsingh/Vityarthi_Java_Project_25BAI11043.git
+   cd Vityarthi_Java_Project_25BAI11043
    ```
 2. Check your Java version:
    ```bash
    java -version
    javac -version
    ```
-   Both need to say **17 or higher**. If they don't, grab [Adoptium Temurin JDK 21](https://adoptium.net/temurin/releases/) for your OS and install it.
-3. Compile:
+   Both `java` and `javac` should report version 17 or higher.
+   
    ```bash
    javac -d out src/*.java
    ```
