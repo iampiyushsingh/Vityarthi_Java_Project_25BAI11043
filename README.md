@@ -24,19 +24,29 @@ I built this because I was tired of watching percentages get recalculated by han
 - Data survives between runs — everything reloads from `students.csv` on startup
 - `Student`, `StudentManager`, and `FileManager` all have tests written against them
 
+## Technologies / Tools Used
+
+- **Language**: Java (JDK 17+, built and tested on JDK 21)
+- **Build**: plain `javac` / `java` — no Maven, no Gradle
+- **Storage**: flat-file CSV (`students.csv`) — no database
+- **Testing**: a hand-rolled test harness (`AppTest.java`) — no JUnit or other framework
+- **Version control**: Git / GitHub
+
 ## Table of Contents
 
 - [Overview](#overview)
 - [Key Features](#key-features)
+- [Technologies / Tools Used](#technologies--tools-used)
 - [Project Structure](#project-structure)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
+- [Testing](#testing)
+- [Screenshots](#screenshots)
 - [How It Works](#how-it-works)
 - [Data File](#data-file)
 - [Workflow](#workflow)
-- [Testing](#testing)
 - [Troubleshooting](#troubleshooting)
 - [Notes](#notes)
 - [Key Classes & Methods](#key-classes--methods)
@@ -193,6 +203,15 @@ Console input (Main) → StudentManager (CRUD) / Student (marks, grade, %)
 - A full save-then-reload round trip through `FileManager`
 
 Run it with `java -cp out AppTest`.
+
+## Screenshots
+
+<!-- Drop screenshots in a screenshots/ folder and reference them below, e.g.: -->
+<!-- ![Main menu](screenshots/main-menu.png) -->
+<!-- ![Individual report](screenshots/individual-report.png) -->
+<!-- ![Test run](screenshots/test-run.png) -->
+
+*(Add terminal screenshots of the menu, a sample report, and a test run here before submitting.)*
 
 ## Troubleshooting
 
