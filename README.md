@@ -112,11 +112,11 @@ Vityarthi_Java_Project_25BAI11043/
    ```bash
    javac -d out src/*.java
    ```
-   That builds all 8 files in `src/` into `out/`. No output means it worked — `javac` only talks when something's wrong.
+   This compiles all Java source files in `src/` and places the generated `.class` files in `out/`. If no compilation errors are displayed, the project has compiled successfully.
 
 ## Configuration
 
-There's nothing to configure — no keys, no env vars, no config file. The only file this program ever creates is `students.csv`, in whatever folder you run it from, and it shows up automatically the first time you add a student.
+The project does not require any special setup or configuration. Just run the program and start adding student records. The required students.csv file is created automatically when the first student is added.
 
 ## Usage
 
@@ -144,7 +144,7 @@ which drops you into:
 Enter your choice:
 ```
 
-Punch in a number, hit Enter, follow the prompts. `0` saves and exits, but honestly you don't even need to remember that — it auto-saves after every add, update, delete, and marks entry anyway.
+Enter the number corresponding to the required operation and follow the instructions displayed on the screen. Select 0 to save the data and exit the program. The application also automatically saves changes after every add, update, delete, or marks entry operation, helping to prevent data loss.
 
 ### Run the tests
 
@@ -164,7 +164,7 @@ Passed: 16   Failed: 0
 Keeps a plain `ArrayList<Student>` in memory with IDs that auto-increment from 1. `addStudent`, `updateStudent`, `deleteStudent`, `findById`, `searchByName` cover the basics. Try to update or delete an ID that doesn't exist and you get a `StudentNotFoundException` instead of a silent no-op.
 
 ### Marks Management (`Student`)
-`addMarks(subject, marks)` checks the mark is between 0 and 100 and the subject isn't blank — anything else throws `InvalidMarksException`. Percentage is just total marks obtained divided by (number of subjects × 100). Grade comes off a fixed scale (A+ at 90%+, down to F below 40%), and 40% is the pass line.
+`addMarks(subject, marks)` checks the mark is between 0 and 100 and the subject isn't blank, anything else throws `InvalidMarksException`. Percentage is just total marks obtained divided by (number of subjects × 100). Grade comes off a fixed scale (A+ at 90%+, down to F below 40%), and 40% is the pass line.
 
 ### Performance Reports (`PerformanceReport`)
 - `individualReport` — one student's full report card
@@ -195,7 +195,7 @@ Console input (Main) → StudentManager (CRUD) / Student (marks, grade, %)
 
 ## Testing
 
-`AppTest.java` doesn't use any testing framework — just a `check()` helper and plain `main()`. It covers:
+`AppTest.java` doesn't use any testing framework, just a `check()` helper and plain `main()`. It covers:
 - Add / find / update / delete, including the exception path when the ID doesn't exist
 - Grade and percentage math
 - Rejecting out-of-range and negative marks
@@ -217,8 +217,8 @@ Run it with `java -cp out AppTest`.
 
 | Problem | Fix |
 |---------|-----|
-| `'javac' is not recognized` / `command not found: javac` | JDK isn't installed, or isn't on your PATH — install JDK 17+. |
-| `error: release version 21 not supported` | Your JDK is older than 17 — update it. |
+| `'javac' is not recognized` / `command not found: javac` | JDK isn't installed, or isn't on your PATH, install JDK 17+. |
+| `error: release version 21 not supported` | The installed JDK is older than JDK 21. Check `java -version` and `javac -version`. |
 | `Could not find or load main class Main` | Run the command from the project root, and make sure `out/Main.class` actually exists (compile first). |
 | Program exits or skips a prompt right away | Type a plain number with no stray spaces, then press Enter. |
 | Data isn't there next time I run it | Run `java -cp out Main` from the exact same folder each time — `students.csv` is relative to wherever you launch it from. |
@@ -226,26 +226,26 @@ Run it with `java -cp out AppTest`.
 
 ## Notes
 
-- Everything lives in one flat CSV — no setup, no server, nothing to install beyond the JDK
-- Reports only reflect whoever's currently loaded in memory, which is whatever was in `students.csv` at startup
-- `out/`, `bin/`, `*.class`, and `students.csv` are all git-ignored on purpose — they're generated, not source
-- The full write-up with diagrams and testing notes is `Project_Report.pdf`, submitted separately through the portal, not part of this repo's evaluation
+- Everything lives in one flat CSV, no setup, no server, nothing to install beyond the JDK.
+- Reports only reflect whoever's currently loaded in memory, which is whatever was in `students.csv` at startup.
+- `out/`, `bin/`, `*.class`, and `students.csv` are all git-ignored on purpose, they're generated, not source.
+- The structured project report, including diagrams and testing information, is included as `Project_Report.pdf`.
 
 ## Key Classes & Methods
 
-- `Student.addMarks()` — validates and records one subject's marks
-- `Student.getPercentage()` / `getGrade()` / `isPass()` — the derived numbers
-- `StudentManager.addStudent()` / `updateStudent()` / `deleteStudent()` — roster CRUD
-- `StudentManager.getByIdOrThrow()` — lookup that throws instead of returning null
-- `FileManager.save()` / `load()` — the CSV round trip
-- `PerformanceReport.individualReport()` / `classAverage()` / `highestLowest()` / `passFailAnalysis()` — the reporting side
+- `Student.addMarks()` : validates and records one subject's marks
+- `Student.getPercentage()` / `getGrade()` / `isPass()` : the derived numbers
+- `StudentManager.addStudent()` / `updateStudent()` / `deleteStudent()` : roster CRUD
+- `StudentManager.getByIdOrThrow()` : lookup that throws instead of returning null
+- `FileManager.save()` / `load()` : the CSV round trip
+- `PerformanceReport.individualReport()` / `classAverage()` / `highestLowest()` / `passFailAnalysis()` : the reporting side
 
 ## License
 
-Coursework submission for VITyarthi — Build Your Own Project.
+This project is part of an AIML course assignment at VIT Bhopal University.
 
 ## Contact
 
-- **Project maintainer**: <Your Name>
-- **Email**: <your.email@vitbhopal.ac.in>
-- **GitHub**: [@<your-github-username>](https://github.com/<your-github-username>)
+- **Project maintainer**: Piyush Kumar Singh
+- **Email**: piyush.25bai11043@vitbhopal.ac.in
+- **GitHub**: [@iampiyushsingh](https://github.com/iampiyushsingh)
