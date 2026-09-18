@@ -8,7 +8,7 @@
 
 ## Overview
 
-I built this project to make student record and marks management easier without having to calculate results manually every time. It is a console-based Java application that manages student details, stores subject-wise marks, and automatically calculates percentage, grade, and pass/fail status.
+I built this project to make student record and marks management easier without having to calculate results manually every time. It is a Java application operated from a console which keeps track of student information, stores the marks according to subject, and automatically computes the percentage, the grade, and the pass/fail status.
 
 - Modules: **Student Management, Marks Management, Performance Reports**
 - Storage: **CSV file** (`students.csv`) for storing student records
@@ -21,7 +21,7 @@ I built this project to make student record and marks management easier without 
 - Enter subject-wise marks with **0–100 validation**
 - Automatically calculates **percentage and letter grade**
 - Shows **class average, highest/lowest scorer, and pass/fail results**
-- Automatically saves changes and reloads student data from `students.csv`
+- The changes are automatically saved and the student data is automatically reloaded from `students.csv`
 - Separate tests are written for **Student, StudentManager, and FileManager**
 
 ## Technologies / Tools Used
