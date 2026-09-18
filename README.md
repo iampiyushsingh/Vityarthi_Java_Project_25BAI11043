@@ -82,7 +82,7 @@ Vityarthi_Java_Project_25BAI11043/
 └── statement.md                       # Problem statement, scope, target users
 ```
 
-`out/` is just what `javac` spits out locally, I'm not committing it. `.gitignore` keeps `out/`, `bin/`, `*.class`, and `students.csv` out of the repo, so only `src/`, `diagrams/`, and the docs actually get pushed.
+`out/` is just what `javac` spits out locally, I'm not committing it. `.gitignore` keeps `out/`, `bin/` and `*.class`, out of the repo, so only `src/`, `diagrams/`, the docs and  `students.csv` (included with sample data so the app runs with real records out of the box) actually get pushed.
 
 ## Requirements
 
