@@ -144,7 +144,7 @@ which drops you into:
 Enter your choice:
 ```
 
-Enter the number corresponding to the required operation and follow the instructions displayed on the screen. Select 0 to save the data and exit the program. The application also automatically saves changes after every add, update, delete, or marks entry operation, helping to prevent data loss.
+Type the number which corresponds to the operation you want to carry out and then carry out the instructions shown on the screen. Choose 0 if you want to save the data and exit the programme. The application also automatically saves the changes after each add, update, delete or marking of an entry, thus helping to avoid data loss.
 
 ### Run the tests
 
