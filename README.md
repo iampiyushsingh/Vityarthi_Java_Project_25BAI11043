@@ -58,7 +58,26 @@ I built this project to make student record and marks management easier without 
 
 ```
 Vityarthi_Java_Project_25BAI11043/
-├── Screenshots/                         
+├── Diagrams/
+│   ├── architecture-diagram.png
+│   ├── class-diagram.png
+│   ├── sequence-diagram.png
+│   ├── usecase-diagram.png
+│   └── workflow-diagram.png
+├── Screenshots/
+│   ├── add-student.png
+│   ├── class-average.png
+│   ├── delete-student.png
+│   ├── enter-marks.png
+│   ├── highest-lowest.png
+│   ├── individual-report.png
+│   ├── main-menu.png
+│   ├── pass-fail.png
+│   ├── percentage-grade.png
+│   ├── save-load.png
+│   ├── search-student.png
+│   ├── test-run.png
+│   └── update-student.png
 ├── out/
 │   ├── AppTest.class
 │   ├── FileManager.class
@@ -80,6 +99,7 @@ Vityarthi_Java_Project_25BAI11043/
 ├── .gitignore
 ├── Project_Report.pdf                 # Detailed report, submitted separately on the portal
 ├── README.md
+├── README.pdf
 └── statement.md                       # Problem statement, scope, target users
 ```
 
