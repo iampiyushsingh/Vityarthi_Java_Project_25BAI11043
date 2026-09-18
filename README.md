@@ -204,14 +204,48 @@ Console input (Main) → StudentManager (CRUD) / Student (marks, grade, %)
 
 Run it with `java -cp out AppTest`.
 
+
 ## Screenshots
 
-<!-- Drop screenshots in a screenshots/ folder and reference them below, e.g.: -->
-<!-- ![Main menu](screenshots/main-menu.png) -->
-<!-- ![Individual report](screenshots/individual-report.png) -->
-<!-- ![Test run](screenshots/test-run.png) -->
+### Main Menu
+![Main Menu](Screenshots/main-menu.png)
 
-*(Add terminal screenshots of the menu, a sample report, and a test run here before submitting.)*
+### Add Student
+![Add Student](Screenshots/add-student.png)
+
+### Update Student
+![Update Student](Screenshots/update-student.png)
+
+### Delete Student
+![Delete Student](Screenshots/delete-student.png)
+
+### Search Student
+![Search Student](Screenshots/search-student.png)
+
+### Enter Marks
+![Enter Marks](Screenshots/enter-marks.png)
+
+### Percentage and Grade
+![Percentage and Grade](Screenshots/percentage-grade.png)
+
+### Individual Report
+![Individual Report](Screenshots/individual-report.png)
+
+### Class Average
+![Class Average](Screenshots/class-average.png)
+
+### Highest and Lowest Marks
+![Highest and Lowest Marks](Screenshots/highest-lowest.png)
+
+### Pass Fail Analysis
+![Pass Fail Analysis](Screenshots/pass-fail.png)
+
+### Save and Load
+![Save and Load](Screenshots/save-load.png)
+
+### Test Run
+![Test Run](Screenshots/test-run.png)
+
 
 ## Troubleshooting
 
