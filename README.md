@@ -8,21 +8,21 @@
 
 ## Overview
 
-I built this because I was tired of watching percentages get recalculated by hand every time someone's marks changed. It's a console-based Java app — no database, no GUI, no server — that keeps a class roster, records subject-wise marks, and works out percentage, grade, and pass/fail the moment you enter something.
+I built this project to make student record and marks management easier without having to calculate results manually every time. It is a console-based Java application that manages student details, stores subject-wise marks, and automatically calculates percentage, grade, and pass/fail status.
 
-- Modules: **Student Management**, **Marks Management**, **Performance Reports**
-- Storage: a plain **CSV file** (`students.csv`) that auto-saves after every change
-- Validation: two custom checked exceptions so bad input can't silently corrupt data
-- Tests: a small hand-rolled test harness — 16 checks, all passing, no JUnit needed
+- Modules: **Student Management, Marks Management, Performance Reports**
+- Storage: **CSV file** (`students.csv`) for storing student records
+- Validation: **Custom checked exceptions** for handling invalid input
+- Testing: **16 test checks**, all passing
 
 ## Key Features
 
-- Add, update, delete, and search students (by ID or by partial name match)
-- Enter subject-wise marks with 0–100 validation baked in
-- Percentage and letter grade (A+ down to F) computed automatically, no manual math
-- Class average, highest/lowest scorer, and a full pass/fail breakdown on demand
-- Data survives between runs — everything reloads from `students.csv` on startup
-- `Student`, `StudentManager`, and `FileManager` all have tests written against them
+- Add, update, delete, and search students using ID or name
+- Enter subject-wise marks with **0–100 validation**
+- Automatically calculates **percentage and letter grade**
+- Shows **class average, highest/lowest scorer, and pass/fail results**
+- Automatically saves changes and reloads student data from `students.csv`
+- Separate tests are written for **Student, StudentManager, and FileManager**
 
 ## Technologies / Tools Used
 
