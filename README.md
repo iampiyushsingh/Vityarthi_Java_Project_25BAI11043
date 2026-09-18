@@ -27,9 +27,9 @@ I built this because I was tired of watching percentages get recalculated by han
 ## Technologies / Tools Used
 
 - **Language**: Java (JDK 17+, built and tested on JDK 21)
-- **Build**: plain `javac` / `java` — no Maven, no Gradle
-- **Storage**: flat-file CSV (`students.csv`) — no database
-- **Testing**: a hand-rolled test harness (`AppTest.java`) — no JUnit or other framework
+- **Build**: plain `javac` / `java` no Maven, no Gradle
+- **Storage**: flat-file CSV (`students.csv`) no database
+- **Testing**: a hand-rolled test harness (`AppTest.java`) no JUnit or other framework
 - **Version control**: Git / GitHub
 
 ## Table of Contents
@@ -57,7 +57,7 @@ I built this because I was tired of watching percentages get recalculated by han
 
 ```
 Vityarthi_Java_Project_25BAI11043/
-├── diagrams/                          # Architecture, workflow & UML diagrams (PNG)
+├── Screenshots/                         
 ├── out/
 │   ├── AppTest.class
 │   ├── FileManager.class
@@ -89,11 +89,11 @@ Vityarthi_Java_Project_25BAI11043/
 | Requirement | Version |
 |-------------|---------|
 | JDK | 17+ (I built and tested this on JDK 21) |
-| Build tool | None — just `javac` / `java` |
+| Build tool | None just `javac` / `java` |
 | External libraries | None |
 
 - **Hardware**: anything that can run a JVM
-- **Storage**: basically nothing — `students.csv` is a few bytes per student
+- **Storage**: basically nothing `students.csv` is a few bytes per student
 
 ## Installation
 
@@ -167,10 +167,10 @@ Keeps a plain `ArrayList<Student>` in memory with IDs that auto-increment from 1
 `addMarks(subject, marks)` checks the mark is between 0 and 100 and the subject isn't blank, anything else throws `InvalidMarksException`. Percentage is just total marks obtained divided by (number of subjects × 100). Grade comes off a fixed scale (A+ at 90%+, down to F below 40%), and 40% is the pass line.
 
 ### Performance Reports (`PerformanceReport`)
-- `individualReport` — one student's full report card
-- `classAverage` — mean percentage across everyone
-- `highestLowest` — top and bottom scorer
-- `passFailAnalysis` — who passed, who didn't, and the class pass rate
+- `individualReport` : one student's full report card
+- `classAverage` : mean percentage across everyone
+- `highestLowest` : top and bottom scorer
+- `passFailAnalysis` : who passed, who didn't, and the class pass rate
 
 ### Persistence (`FileManager`)
 Each student becomes one CSV line: `id,name,subject:marks,subject:marks,...`. On startup it reads the file back, rebuilds every `Student`, and even restores `nextId` correctly so new students don't collide with old IDs. If a line's gotten corrupted somehow, it skips that record and prints a warning instead of crashing the whole load.
@@ -221,15 +221,17 @@ Run it with `java -cp out AppTest`.
 | `error: release version 21 not supported` | The installed JDK is older than JDK 21. Check `java -version` and `javac -version`. |
 | `Could not find or load main class Main` | Run the command from the project root, and make sure `out/Main.class` actually exists (compile first). |
 | Program exits or skips a prompt right away | Type a plain number with no stray spaces, then press Enter. |
-| Data isn't there next time I run it | Run `java -cp out Main` from the exact same folder each time — `students.csv` is relative to wherever you launch it from. |
-| `Warning: skipped corrupted record` | Someone (probably me) hand-edited `students.csv` and broke a line — fix or delete that line. |
+| Data isn't there next time I run it | Run `java -cp out Main` from the exact same folder each time `students.csv` is relative to wherever you launch it from. |
+| `Warning: skipped corrupted record` | Someone (probably me) hand-edited `students.csv` and broke a line fix or delete that line. |
 
 ## Notes
 
-- Everything lives in one flat CSV, no setup, no server, nothing to install beyond the JDK.
-- Reports only reflect whoever's currently loaded in memory, which is whatever was in `students.csv` at startup.
-- `out/`, `bin/`, `*.class`, and `students.csv` are all git-ignored on purpose, they're generated, not source.
-- The structured project report, including diagrams and testing information, is included as `Project_Report.pdf`.
+### Project Notes
+
+- All student data is stored in a single CSV file, so no setup, server, or additional software is required apart from the JDK.
+- Reports are generated based on the student data currently loaded from `students.csv` when the program starts.
+- `out/`, `bin/`, `*.class`, and `students.csv` are included in `.gitignore` because they are generated files and are not part of the source code.
+- The complete project report, including diagrams and testing details, is provided in `Project_Report.pdf`.
 
 ## Key Classes & Methods
 
