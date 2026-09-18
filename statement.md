@@ -1,13 +1,15 @@
 # Problem Statement
 
-Manually tracking student marks, percentages, and grades in a classroom or
-small institute is error-prone and time-consuming when done with pen-and-paper
-or plain spreadsheets that aren't purpose-built for it: recalculating
-percentages by hand, forgetting who scored what, and comparing students against
-the class average all become tedious as the class grows. There is a need for a
-lightweight, dependency-free tool that a teacher or student coordinator can run
-immediately, without setting up a database or web server, to manage student
-records and generate performance insights on demand.
+Manually keeping track of student marks, percentages, and grades in a
+classroom or small institute can be cumbersome and prone to mistakes if not
+done using specialized tools like pen-and-paper method or basic spreadsheet
+tools not tailored for this task: calculating percentages manually,
+forgetting whom which percentage belongs to, comparing students to As the
+class grows, the average turns out to be quite boring. There arises the need
+for a small, lightweight program without external dependencies that a teacher
+or student coordinator could run immediately without any setup of database or
+web server for managing student
+data.
 
 ## Scope of the Project
 
@@ -28,11 +30,11 @@ submission.
 
 ## Target Users
 
-- **Students** (like the project author) who want a personal tool to track
-  their own subject-wise performance across a semester.
+- **Students** (like me) who want a personal tool to track
+  their individual performance in each subject over the course of a semester.
 - **Teachers / class coordinators** managing a small set of students (a
   classroom, a lab batch, a mentoring group) who need quick add/update/search
-  and instant class statistics without opening a spreadsheet.
+  and having the class statistics available at once without opening a spreadsheet.
 
 ## High-Level Features
 
