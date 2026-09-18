@@ -39,6 +39,7 @@ I built this project to make student record and marks management easier without 
 - [Technologies / Tools Used](#technologies--tools-used)
 - [Project Structure](#project-structure)
 - [Requirements](#requirements)
+- [Non-Functional Requirements](#non-functional-requirements)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
@@ -95,6 +96,16 @@ Vityarthi_Java_Project_25BAI11043/
 - **Hardware**: anything that can run a JVM
 - **Storage**: basically nothing `students.csv` is a few bytes per student
 
+## Non-Functional Requirements
+
+1. **Performance** : CRUD operations and report generation complete in under 1 second for a roster of a few hundred students, since everything is held in memory as an `ArrayList<Student>`.
+2. **Reliability** : Every add, update, delete, or marks entry is immediately persisted to `students.csv`, so no data is lost if the program exits unexpectedly.
+3. **Usability** : A numbered console menu (0–10) guides the user through every operation with clear prompts, so no prior documentation is needed to operate the system.
+4. **Maintainability** : Each responsibility is isolated into its own class (`Student`, `StudentManager`, `FileManager`, `PerformanceReport`), so a change to one concern (e.g. storage format) doesn't require touching the others.
+5. **Error Handling / Robustness** : Custom checked exceptions (`InvalidMarksException`, `StudentNotFoundException`) force calling code to handle bad input explicitly rather than failing silently; a corrupted CSV line is skipped with a warning instead of crashing the whole load.
+6. **Resource Efficiency** : No external dependencies, no database server, and no build tool overhead, the entire system runs on a bare JDK install with a CSV file a few bytes in size.
+
+   
 ## Installation
 
 1. Clone it:
