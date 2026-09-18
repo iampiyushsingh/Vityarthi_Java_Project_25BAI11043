@@ -228,10 +228,11 @@ Run it with `java -cp out AppTest`.
 
 ### Project Notes
 
-- All student data is stored in a single CSV file, so no setup, server, or additional software is required apart from the JDK.
-- Reports are generated based on the student data currently loaded from `students.csv` when the program starts.
-- `out/`, `bin/`, `*.class`, and `students.csv` are included in `.gitignore` because they are generated files and are not part of the source code.
-- The complete project report, including diagrams and testing details, is provided in `Project_Report.pdf`.
+- The data for all students is kept in one CSV file, which means that no setup is needed, no server is required and no additional software is necessary apart from the JDK.
+- Reports are produced using the student data which has been loaded from the file students.csv when the program is started.
+- The files `out/`, `bin/`, `*.class`, and `students.csv` are included in `.gitignore` since they are generated files and therefore not part of the source code.
+- The full project report, with the diagrams and information about the testing, is included in `Project_Report.pdf`.
+
 
 ## Key Classes & Methods
 
